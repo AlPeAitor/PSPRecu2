@@ -34,7 +34,7 @@ class Controller(private val repoUsu:RepositorioUsuarios, private val repoTexto:
         return ControladorCripto.encriptar(id, claveAdmin)
     }
 
-    @GetMapping("/admin")
+    @GetMapping("/admin/textos")
     fun encriptacionTextos(): String{
         return ControladorCripto.encriptar(repoTexto.findAll().toString(), claveAdmin)
     }
